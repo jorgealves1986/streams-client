@@ -8,11 +8,12 @@ You will need 2 more repositories to make this thing work:
 Note: This was done using node v12.16.1
 
 Instructions for this repo:
-1 - After cloning execute command "npm install" on root folder;
-2 - You need to create a file "config.js" on root folder with the following content: export const googleClientId = <your Client ID from Google OAuth 2.0>;
-3 - Start streams-api server and streams-rtmpserver (instructions for theese are on each of those repos);
-4 - After creating a stream on this App, you should open your streaming software of choice (for example: OBS) and configure the server, for example, in OBS go to settings -> tab Stream -> Service = custom, Server = rtmp://localhost/live, Stream key = <your stream id created on this App>.
-5 - Start streaming on your streaming software of choice and select the stream you created on this App.
+
+- After cloning execute command "npm install" on root folder;
+- You need to create a file "config.js" on root folder with the following content: export const googleClientId = <your Client ID from Google OAuth 2.0>;
+- Start streams-api server and streams-rtmpserver (instructions for theese are on each of those repos);
+- After creating a stream on this App, you should open your streaming software of choice (for example: OBS) and configure the server, for example, in OBS go to settings -> tab Stream -> Service = custom, Server = rtmp://localhost/live, Stream key = <your stream id created on this App>.
+- Start streaming on your streaming software of choice and select the stream you created on this App.
 
 Note: on point 4, you can see your stream id on this App when you select one previouslly created stream and look to the browser URL. Should be something like: http://localhost:3000/streams/<your stream id>
 
