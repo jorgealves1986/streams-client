@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 
 import { signIn, signOut } from '../actions';
+import { googleClientId } from '../config';
 
 const GoogleAuth = ({ signIn, signOut, isSignedIn }) => {
   const auth = useRef();
@@ -10,8 +11,7 @@ const GoogleAuth = ({ signIn, signOut, isSignedIn }) => {
     window.gapi.load('client:auth2', () => {
       window.gapi.client
         .init({
-          clientId:
-            '414692973938-nebv1qk61njb5hrvspi2h6ok4u4d2s3c.apps.googleusercontent.com',
+          clientId: googleClientId,
           scope: 'email'
         })
         .then(() => {
